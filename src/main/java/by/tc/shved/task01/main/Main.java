@@ -22,7 +22,7 @@ public class Main {
 		Criteria<Oven> criteriaOven = new Criteria<>();
 		criteriaOven.setApplianceType(ApplianceType.OVEN);
 		criteriaOven.add(Oven.CAPACITY, 33);
-
+		System.out.printf(":sosi");
 		if(Validator.criteriaValidator(criteriaOven)){
 			appliance = service.find(criteriaOven);
 			PrintApplianceInfo.print(appliance);
