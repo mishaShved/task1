@@ -6,13 +6,15 @@
 package by.tc.shved.task01.parser;
 
 import java.io.*;
+import java.util.List;
+
 /**
  *
  * @author misha
  */
 public class ApplianceFileReader {
 
-    public static String readFile(String fileName) throws IOException {
+    public static String[] readFile(String fileName) throws IOException {
 
         StringBuilder builder = new StringBuilder();
 
@@ -26,7 +28,7 @@ public class ApplianceFileReader {
 
         }
 
-        return builder.toString();
+        return builder.toString().split("\n");
     }
 
     public static String getValue(String parameter, String appliance) {
