@@ -1,7 +1,6 @@
-package by.tc.shved.task01.ApplianceFactory.ApplianceCreatorImpl;
+package by.tc.shved.task01.factory.impl;
 
-import by.tc.shved.task01.ApplianceFactory.ApplainceCreator;
-import by.tc.shved.task01.entity.Appliance;
+import by.tc.shved.task01.factory.ApplainceCreator;
 import by.tc.shved.task01.entity.Laptop;
 import by.tc.shved.task01.entity.criteria.SearchCriteria;
 import by.tc.shved.task01.parser.ApplianceFileReader;

@@ -1,6 +1,6 @@
-package by.tc.shved.task01.ApplianceFactory;
+package by.tc.shved.task01.factory;
 
-import by.tc.shved.task01.ApplianceFactory.ApplianceCreatorImpl.*;
+import by.tc.shved.task01.factory.impl.*;
 import by.tc.shved.task01.entity.criteria.ApplianceType;
 
 public class ApplianceFactory {

@@ -1,23 +1,14 @@
 package by.tc.shved.task01.dao.impl;
 
-import by.tc.shved.task01.ApplianceFactory.ApplianceFactory;
+import by.tc.shved.task01.factory.ApplianceFactory;
 import by.tc.shved.task01.dao.ApplianceDAO;
 import by.tc.shved.task01.entity.Appliance;
-import by.tc.shved.task01.entity.Laptop;
-import by.tc.shved.task01.entity.Oven;
-import by.tc.shved.task01.entity.Refrigerator;
-import by.tc.shved.task01.entity.Speakers;
-import by.tc.shved.task01.entity.TabletPC;
-import by.tc.shved.task01.entity.VacuumCleaner;
 import by.tc.shved.task01.entity.criteria.Criteria;
-import by.tc.shved.task01.entity.criteria.SearchCriteria;
 import by.tc.shved.task01.exception.WorkingWithDataSourceException;
 import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ApplianceDAOImpl implements ApplianceDAO{
     
