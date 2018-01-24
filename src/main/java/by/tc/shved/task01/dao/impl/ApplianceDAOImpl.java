@@ -16,17 +16,19 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 	@Override
 	public <E> List<Appliance> find(Criteria<E> criteria) throws WorkingWithDataSourceException{
 
-		List<Appliance> appliance = new ArrayList<>();
+		List<Appliance> searchResult = new ArrayList<>();
 
 		String[] appliances = {};
 
 		ApplianceFactory factory = ApplianceFactory.getInstance();
 
+
 		try {
 			appliances = ApplianceFileReader.readFile("src/main/resources/appliances_db.txt");
-		}catch(IOException e){
-			new WorkingWithDataSourceException();
+		} catch (IOException e) {
+			throw new WorkingWithDataSourceException();
 		}
+
 
 		boolean flag;
 
@@ -49,7 +51,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 
 				if (flag){
 
-					appliance.add(factory.getCreator(criteria.getApplianceType()).create(applianceText));
+					searchResult.add(factory.getCreator(criteria.getApplianceType()).create(applianceText));
 
 					}
 
@@ -57,6 +59,6 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 
 			}
 
-			return appliance;
+			return searchResult;
 	}
 }

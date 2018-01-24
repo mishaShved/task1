@@ -27,7 +27,7 @@ public class Main {
 			try{
 				appliance = service.find(criteriaOven);
 			}catch (WorkingWithDataSourceException e){
-				PrintApplianceInfo.printMessage("Something ");
+				PrintApplianceInfo.printMessage("Exception with data source ");
 				System.exit(0);
 			}
 
@@ -46,7 +46,7 @@ public class Main {
 			try{
 				appliance = service.find(criteriaOven);
 			}catch (WorkingWithDataSourceException e){
-				PrintApplianceInfo.printMessage("Something ");
+				PrintApplianceInfo.printMessage("Exception with data source");
 				System.exit(0);
 			}
 			PrintApplianceInfo.print(appliance);
@@ -64,7 +64,7 @@ public class Main {
 			try{
 				appliance = service.find(criteriaLaptop);
 			}catch (WorkingWithDataSourceException e){
-				PrintApplianceInfo.printMessage("Something ");
+				PrintApplianceInfo.printMessage("Exception with data source");
 				System.exit(0);
 			}
 			PrintApplianceInfo.print(appliance);
@@ -84,7 +84,7 @@ public class Main {
 			try{
 				appliance = service.find(criteriaTabletPC);
 			}catch (WorkingWithDataSourceException e){
-				PrintApplianceInfo.printMessage("Something ");
+				PrintApplianceInfo.printMessage("Exception with data source");
 				System.exit(0);
 			}
 			PrintApplianceInfo.print(appliance);
