@@ -21,6 +21,26 @@ public class TabletPC extends Appliance{
         this.color = color;
     }
 
+    public double getBatteryCapacity() {
+        return batteryCapacity;
+    }
+
+    public double getDisplayInches() {
+        return displayInches;
+    }
+
+    public double getMemoryRoom() {
+        return memoryRoom;
+    }
+
+    public double getFlashMemoryCapacity() {
+        return flashMemoryCapacity;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     @Override
     public String toString() {
         return "TabletPC{" +

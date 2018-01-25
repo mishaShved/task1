@@ -13,32 +13,32 @@ public class ApplianceFactory {
     private ApplianceFactory() {
     }
 
-    public ApplainceCreator getCreator(ApplianceType type){
+    public ApplianceCreator getCreator(ApplianceType type){
 
-        ApplainceCreator applainceCreator = null;
+        ApplianceCreator applianceCreator = null;
 
         switch (type) {
 
             case OVEN:
-                applainceCreator = new OvenCreator();
+                applianceCreator = new OvenCreator();
                 break;
             case LAPTOP:
-                applainceCreator = new LaptopCreator();
+                applianceCreator = new LaptopCreator();
                 break;
             case SPEAKERS:
-                applainceCreator = new SpeakersCreator();
+                applianceCreator = new SpeakersCreator();
                 break;
             case TABLET_PC:
-                applainceCreator = new TabletPCCreator();
+                applianceCreator = new TabletPCCreator();
                 break;
             case REFRIGERATOR:
-                applainceCreator = new RefrigeratorCreator();
+                applianceCreator = new RefrigeratorCreator();
                 break;
             case VACUUM_CLEANER:
-                applainceCreator = new VacuumCleanerCreator();
+                applianceCreator = new VacuumCleanerCreator();
                 break;
         }
 
-        return applainceCreator;
+        return applianceCreator;
     }
 }

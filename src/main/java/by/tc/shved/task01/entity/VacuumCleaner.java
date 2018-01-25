@@ -22,6 +22,30 @@ public class VacuumCleaner extends Appliance{
         this.cleaningWidth = Double.parseDouble(cleaningWidth);
     }
 
+    public double getPowerConsumption() {
+        return powerConsumption;
+    }
+
+    public String getFilterType() {
+        return filterType;
+    }
+
+    public String getBagType() {
+        return bagType;
+    }
+
+    public String getWandType() {
+        return wandType;
+    }
+
+    public double getMotorSpeedRegulation() {
+        return motorSpeedRegulation;
+    }
+
+    public double getCleaningWidth() {
+        return cleaningWidth;
+    }
+
     @Override
     public String toString() {
         return "VacuumCleaner{" +

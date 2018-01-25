@@ -18,6 +18,22 @@ public class Speakers extends Appliance{
         this.cordLength = Double.parseDouble(cordLength);
     }
 
+    public double getPowerConsumption() {
+        return powerConsumption;
+    }
+
+    public double getNumberOfSpeakers() {
+        return numberOfSpeakers;
+    }
+
+    public String getFrequencyRange() {
+        return frequencyRange;
+    }
+
+    public double getCordLength() {
+        return cordLength;
+    }
+
     @Override
     public String toString() {
         return "Speakers{" +

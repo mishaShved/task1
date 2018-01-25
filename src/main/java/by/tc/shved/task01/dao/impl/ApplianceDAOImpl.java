@@ -30,11 +30,11 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 		}
 
 
-		boolean flag;
+		boolean fitsCriteria;
 
 		for(String applianceText: appliances){
 
-			flag = true;
+			fitsCriteria = true;
 
 			if(applianceText.toLowerCase().startsWith(criteria.getApplianceType().toString())){
 
@@ -43,13 +43,13 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 					if(!ApplianceFileReader.getValue(criteriaKey.toString() ,applianceText)
 							.equalsIgnoreCase(criteria.getElement(criteriaKey).toString())){
 
-						flag = false;
+						fitsCriteria = false;
 						break;
 					}
 
 				}
 
-				if (flag){
+				if (fitsCriteria){
 
 					searchResult.add(factory.getCreator(criteria.getApplianceType()).create(applianceText));
 
@@ -61,4 +61,5 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 
 			return searchResult;
 	}
+
 }

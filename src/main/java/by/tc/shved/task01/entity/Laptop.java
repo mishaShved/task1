@@ -19,6 +19,25 @@ public class Laptop extends Appliance{
         this.displayInch = Double.parseDouble(displayInch);
     }
 
+    public double getBatteryCapacity() {
+        return batteryCapacity;
+    }
+
+    public String getOs() {
+        return os;
+    }
+
+    public double getMemoryRoom() {
+        return memoryRoom;
+    }
+
+    public double getCpu() {
+        return cpu;
+    }
+
+    public double getDisplayInch() {
+        return displayInch;
+    }
 
     @Override
     public String toString() {

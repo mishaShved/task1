@@ -98,6 +98,4 @@ public class Validator {
 		return flag;
 	}
 
-
-
 }

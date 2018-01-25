@@ -23,6 +23,30 @@ public class Refrigerator extends Appliance{
         this.width = Double.parseDouble(width);
     }
 
+    public double getPowerConsumption() {
+        return powerConsumption;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getFreezeCapacity() {
+        return freezeCapacity;
+    }
+
+    public double getOveralCapacity() {
+        return overalCapacity;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
     @Override
     public String toString() {
         return "Refrigerator{" +

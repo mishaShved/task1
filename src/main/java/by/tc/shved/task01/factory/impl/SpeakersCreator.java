@@ -1,6 +1,6 @@
 package by.tc.shved.task01.factory.impl;
 
-import by.tc.shved.task01.factory.ApplainceCreator;
+import by.tc.shved.task01.factory.ApplianceCreator;
 import by.tc.shved.task01.entity.Speakers;
 import by.tc.shved.task01.entity.criteria.SearchCriteria;
 import by.tc.shved.task01.parser.ApplianceFileReader;
@@ -8,7 +8,7 @@ import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SpeakersCreator extends ApplainceCreator{
+public class SpeakersCreator extends ApplianceCreator {
 
     @Override
     public Speakers create(String applianceText){

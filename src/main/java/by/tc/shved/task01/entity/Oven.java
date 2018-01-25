@@ -22,6 +22,30 @@ public class Oven extends Appliance{
         this.width = Double.parseDouble(width);
     }
 
+    public double getPowerConsumption() {
+        return powerConsumption;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getCapacity() {
+        return capacity;
+    }
+
+    public double getDepth() {
+        return depth;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
     @Override
     public String toString() {
         return "Oven{" +
