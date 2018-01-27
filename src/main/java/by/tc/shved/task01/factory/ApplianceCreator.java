@@ -7,6 +7,4 @@ public class ApplianceCreator {
     public Appliance create(String applianceTextFormat){
         return null;
     }
-
-
 }

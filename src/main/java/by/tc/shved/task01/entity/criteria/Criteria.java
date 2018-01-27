@@ -1,5 +1,7 @@
 package by.tc.shved.task01.entity.criteria;
 
+import by.tc.shved.task01.entity.Appliance;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -29,6 +31,5 @@ public class Criteria<E> {
 	public void setApplianceType(ApplianceType applianceType) {
 		this.applianceType = applianceType;
 	}
-
 
 }
