@@ -23,7 +23,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 
         List<Appliance> searchResult = new ArrayList<>();
 
-        String[] appliancesInTextFormat = {};
+        String[] appliancesInTextFormat;
 
         try {
             appliancesInTextFormat = ApplianceFileReader.readFile(WorkerWithProperties.getOurInstance().getFileName());
@@ -35,7 +35,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 
             if (isFitsCriteria(applianceText, criteria)) {
 
-                createAppliance(searchResult, criteria.getApplianceType(), applianceText);
+                searchResult.add(createAppliance(criteria.getApplianceType(), applianceText));
 
             }
         }
@@ -43,8 +43,8 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         return searchResult;
     }
 
-    private void createAppliance(List<Appliance> searchResult, ApplianceType type, String applianceInTextFormat) {
-        searchResult.add(factory.getCreator(type).create(applianceInTextFormat));
+    private Appliance createAppliance(ApplianceType type, String applianceInTextFormat) {
+        return factory.getCreator(type).create(applianceInTextFormat);
     }
 
     private <E> boolean isFitsCriteria(String applianceInTextFormat, Criteria<E> criteria) {
