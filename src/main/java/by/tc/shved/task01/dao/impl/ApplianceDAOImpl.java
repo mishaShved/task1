@@ -23,18 +23,15 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 
         List<Appliance> searchResult = new ArrayList<>();
 
-        String[] appliances = {};
+        String[] appliancesInTextFormat = {};
 
         try {
-            appliances = ApplianceFileReader.readFile(WorkerWithProperties.getOurInstance().getFileName());
+            appliancesInTextFormat = ApplianceFileReader.readFile(WorkerWithProperties.getOurInstance().getFileName());
         } catch (IOException e) {
             throw new WorkingWithDataSourceException();
         }
 
-
-        boolean fitsCriteria;
-
-        for (String applianceText : appliances) {
+        for (String applianceText : appliancesInTextFormat) {
 
             if (isFitsCriteria(applianceText, criteria)) {
 
@@ -42,7 +39,6 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 
             }
         }
-
 
         return searchResult;
     }
