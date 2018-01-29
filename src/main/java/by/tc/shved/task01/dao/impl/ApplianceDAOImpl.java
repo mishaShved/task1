@@ -31,11 +31,11 @@ public class ApplianceDAOImpl implements ApplianceDAO {
             throw new WorkingWithDataSourceException();
         }
 
-        for (String applianceText : appliancesInTextFormat) {
+        for (String applianceData : appliancesInTextFormat) {
 
-            if (isFitsCriteria(applianceText, criteria)) {
+            if (isFitsCriteria(applianceData, criteria)) {
 
-                searchResult.add(createAppliance(criteria.getApplianceType(), applianceText));
+                searchResult.add(createAppliance(criteria.getApplianceType(), applianceData));
 
             }
         }
