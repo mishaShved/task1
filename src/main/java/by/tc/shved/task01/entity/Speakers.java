@@ -1,6 +1,8 @@
 package by.tc.shved.task01.entity;
 
-public class Speakers extends Appliance{
+import java.util.Objects;
+
+public class Speakers implements Appliance{
 
     private double powerConsumption;
     private double numberOfSpeakers;
@@ -32,6 +34,23 @@ public class Speakers extends Appliance{
 
     public double getCordLength() {
         return cordLength;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Speakers speakers = (Speakers) o;
+        return Double.compare(speakers.powerConsumption, powerConsumption) == 0 &&
+                Double.compare(speakers.numberOfSpeakers, numberOfSpeakers) == 0 &&
+                Double.compare(speakers.cordLength, cordLength) == 0 &&
+                Objects.equals(frequencyRange, speakers.frequencyRange);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(powerConsumption, numberOfSpeakers, frequencyRange, cordLength);
     }
 
     @Override

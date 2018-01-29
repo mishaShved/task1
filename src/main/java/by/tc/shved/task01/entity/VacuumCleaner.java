@@ -1,6 +1,8 @@
 package by.tc.shved.task01.entity;
 
-public class VacuumCleaner extends Appliance{
+import java.util.Objects;
+
+public class VacuumCleaner implements Appliance{
 
     private double powerConsumption;
     private String filterType;
@@ -44,6 +46,25 @@ public class VacuumCleaner extends Appliance{
 
     public double getCleaningWidth() {
         return cleaningWidth;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VacuumCleaner that = (VacuumCleaner) o;
+        return Double.compare(that.powerConsumption, powerConsumption) == 0 &&
+                Double.compare(that.motorSpeedRegulation, motorSpeedRegulation) == 0 &&
+                Double.compare(that.cleaningWidth, cleaningWidth) == 0 &&
+                Objects.equals(filterType, that.filterType) &&
+                Objects.equals(bagType, that.bagType) &&
+                Objects.equals(wandType, that.wandType);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(powerConsumption, filterType, bagType, wandType, motorSpeedRegulation, cleaningWidth);
     }
 
     @Override

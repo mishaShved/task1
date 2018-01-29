@@ -1,6 +1,8 @@
 package by.tc.shved.task01.entity;
 
-public class TabletPC extends Appliance{
+import java.util.Objects;
+
+public class TabletPC implements Appliance{
 
 
     private double batteryCapacity;
@@ -39,6 +41,24 @@ public class TabletPC extends Appliance{
 
     public String getColor() {
         return color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TabletPC tabletPC = (TabletPC) o;
+        return Double.compare(tabletPC.batteryCapacity, batteryCapacity) == 0 &&
+                Double.compare(tabletPC.displayInches, displayInches) == 0 &&
+                Double.compare(tabletPC.memoryRoom, memoryRoom) == 0 &&
+                Double.compare(tabletPC.flashMemoryCapacity, flashMemoryCapacity) == 0 &&
+                Objects.equals(color, tabletPC.color);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(batteryCapacity, displayInches, memoryRoom, flashMemoryCapacity, color);
     }
 
     @Override

@@ -1,6 +1,8 @@
 package by.tc.shved.task01.entity;
 
-public class Laptop extends Appliance{
+import java.util.Objects;
+
+public class Laptop implements Appliance{
 
     private double batteryCapacity;
     private String os;
@@ -37,6 +39,24 @@ public class Laptop extends Appliance{
 
     public double getDisplayInch() {
         return displayInch;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Laptop laptop = (Laptop) o;
+        return Double.compare(laptop.batteryCapacity, batteryCapacity) == 0 &&
+                Double.compare(laptop.memoryRoom, memoryRoom) == 0 &&
+                Double.compare(laptop.cpu, cpu) == 0 &&
+                Double.compare(laptop.displayInch, displayInch) == 0 &&
+                Objects.equals(os, laptop.os);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(batteryCapacity, os, memoryRoom, cpu, displayInch);
     }
 
     @Override

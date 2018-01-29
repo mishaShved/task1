@@ -1,7 +1,9 @@
 package by.tc.shved.task01.entity;
 
 
-public class Refrigerator extends Appliance{
+import java.util.Objects;
+
+public class Refrigerator implements Appliance{
 
     private double powerConsumption;
     private double weight;
@@ -45,6 +47,25 @@ public class Refrigerator extends Appliance{
 
     public double getWidth() {
         return width;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Refrigerator that = (Refrigerator) o;
+        return Double.compare(that.powerConsumption, powerConsumption) == 0 &&
+                Double.compare(that.weight, weight) == 0 &&
+                Double.compare(that.freezeCapacity, freezeCapacity) == 0 &&
+                Double.compare(that.overalCapacity, overalCapacity) == 0 &&
+                Double.compare(that.height, height) == 0 &&
+                Double.compare(that.width, width) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(powerConsumption, weight, freezeCapacity, overalCapacity, height, width);
     }
 
     @Override

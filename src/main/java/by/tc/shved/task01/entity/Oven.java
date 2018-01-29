@@ -1,6 +1,8 @@
 package by.tc.shved.task01.entity;
 
-public class Oven extends Appliance{
+import java.util.Objects;
+
+public class Oven implements Appliance{
 
     private double powerConsumption;
     private double weight;
@@ -44,6 +46,25 @@ public class Oven extends Appliance{
 
     public double getWidth() {
         return width;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Oven oven = (Oven) o;
+        return Double.compare(oven.powerConsumption, powerConsumption) == 0 &&
+                Double.compare(oven.weight, weight) == 0 &&
+                Double.compare(oven.capacity, capacity) == 0 &&
+                Double.compare(oven.depth, depth) == 0 &&
+                Double.compare(oven.height, height) == 0 &&
+                Double.compare(oven.width, width) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(powerConsumption, weight, capacity, depth, height, width);
     }
 
     @Override
