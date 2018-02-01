@@ -4,7 +4,7 @@ import by.tc.shved.task01.factory.impl.*;
 import by.tc.shved.task01.entity.criteria.ApplianceType;
 
 public class ApplianceFactory {
-    private static ApplianceFactory ourInstance = new ApplianceFactory();
+    private static final ApplianceFactory ourInstance = new ApplianceFactory();
 
     public static ApplianceFactory getInstance() {
         return ourInstance;
