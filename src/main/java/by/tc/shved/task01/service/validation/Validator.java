@@ -7,7 +7,7 @@ public class Validator {
 
 	public static <E> boolean criteriaValidator(Criteria<E> criteria) {
 
-		boolean isVali = true;
+		boolean isValid = true;
 
 		switch (criteria.getApplianceType()){
                         
