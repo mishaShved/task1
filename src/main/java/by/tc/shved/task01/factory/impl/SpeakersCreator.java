@@ -8,7 +8,7 @@ import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SpeakersCreator extends ApplianceCreator {
+public class SpeakersCreator implements ApplianceCreator {
 
     @Override
     public Speakers create(String applianceText){

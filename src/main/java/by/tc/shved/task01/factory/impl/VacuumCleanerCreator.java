@@ -8,7 +8,7 @@ import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VacuumCleanerCreator extends ApplianceCreator {
+public class VacuumCleanerCreator implements ApplianceCreator {
 
     @Override
     public VacuumCleaner create(String applianceText){

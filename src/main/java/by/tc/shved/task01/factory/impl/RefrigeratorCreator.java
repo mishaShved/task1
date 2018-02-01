@@ -8,7 +8,7 @@ import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RefrigeratorCreator extends ApplianceCreator {
+public class RefrigeratorCreator implements ApplianceCreator {
 
     @Override
     public Refrigerator create(String applianceText){

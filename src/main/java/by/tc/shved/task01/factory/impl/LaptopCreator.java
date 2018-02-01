@@ -8,7 +8,7 @@ import by.tc.shved.task01.parser.ApplianceFileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LaptopCreator extends ApplianceCreator {
+public class LaptopCreator implements ApplianceCreator {
 
     @Override
     public Laptop create(String applianceText){
