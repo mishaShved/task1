@@ -7,7 +7,7 @@ public class Validator {
 
 	public static <E> boolean criteriaValidator(Criteria<E> criteria) {
 
-		boolean flag = true;
+		boolean isValid = true;
 
 		switch (criteria.getApplianceType()){
                         
@@ -15,7 +15,7 @@ public class Validator {
 			case OVEN:
 					for(E element : criteria.getKeySet()){
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -24,12 +24,12 @@ public class Validator {
 				for(E element : criteria.getKeySet()){
 					if(element == SearchCriteria.Laptop.OS){
 						if (!(criteria.getElement(element) instanceof String)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}else{
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -40,12 +40,12 @@ public class Validator {
 				for(E element : criteria.getKeySet()){
 					if(element == SearchCriteria.Speakers.FREQUENCY_RANGE){
 						if (!(criteria.getElement(element) instanceof String)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}else{
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -55,12 +55,12 @@ public class Validator {
 				for(E element : criteria.getKeySet()){
 					if(element == SearchCriteria.TabletPC.COLOR){
 						if (!(criteria.getElement(element) instanceof String)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}else{
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -70,7 +70,7 @@ public class Validator {
 			case REFRIGERATOR:
 					for(E element : criteria.getKeySet()){
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -81,12 +81,12 @@ public class Validator {
 							element == SearchCriteria.VacuumCleaner.BAG_TYPE ||
 							element == SearchCriteria.VacuumCleaner.WAND_TYPE){
 						if (!(criteria.getElement(element) instanceof String)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}else{
 						if (!(criteria.getElement(element) instanceof Number)){
-							flag = false;
+							isValid = false;
 							break;
 						}
 					}
@@ -95,7 +95,7 @@ public class Validator {
 				break;
 		}
 
-		return flag;
+		return isValid;
 	}
 
 }
