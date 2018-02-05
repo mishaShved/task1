@@ -11,7 +11,7 @@ public class Validator {
 
 		switch (criteria.getApplianceType()){
                         
-                    
+                    // pi.....pi....pi....pi....pi
 			case OVEN:
 					for(E element : criteria.getKeySet()){
 						if (!(criteria.getElement(element) instanceof Number)){
